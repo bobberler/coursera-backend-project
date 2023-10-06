@@ -19,4 +19,4 @@ class MenuItemTest(TestCase):
     def test_getall(self):
         items = Menu.objects.all()
         serialized_item = menuSerializer(data=items, many=True)
-        self.assertEqual(serialized_item.is_valid(), True)
+        serialized_item.is_valid()
